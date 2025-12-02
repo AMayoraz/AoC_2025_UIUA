@@ -6,7 +6,7 @@ F      ← □⊂⊸⍜-⇡°⊂
 Ranges ← °⋕/◇⊂≡F Parsed
 
 # Check series numbers
-/⊂⊸≡⍚(↧⊃(≍⊸↻⌊÷₂⊸⧻|=0◿2⧻))Ranges
+/⊂⊸≡⍚(↧⊃(≍⊸↻⌊÷₂|=0◿2)⊸⧻)Ranges
 
 # Get all the series numbers
 ▽≡◇⊙
