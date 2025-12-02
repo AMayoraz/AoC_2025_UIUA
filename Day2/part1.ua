@@ -1,0 +1,18 @@
+&rs ∞ &fo "aoc2025_2_1.txt"
+# $ 11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124
+Data   ←
+Parsed ← ⊜(⊜⋕⊸≠@-)⊸≠@, Data
+F      ← □°⋕⊂⊸⍜-⇡°⊂
+Ranges ← ≡F Parsed
+
+# Check series numbers
+≡⍚≡⍚(≍⊸↻⌊÷₂⊸⧻)Ranges
+# Check for even length numbers
+≡⍚≡⍚(=0◿2⧻)Ranges
+# Create the mask from both previous checks
+≡⍚≡⍚↧
+# Get all the series numbers
+⬚0⋕≡⍚≡⍚˜▽Ranges
+
+# Sum them
+/+♭
