@@ -14,10 +14,10 @@ Data ←
 ="@"⊜∘⊸≠@\n Data
 
 # Count neighbors of each rolls
-⊸×/+⊸⬚0↻ ⊂A₂C₂
+⤙×/+⊸⬚0↻ ⊂A₂C₂
 
 # Mark empty spaces
-+⊙(×₋₁=0)
++×₋₁=0
 
 # Get the valid rolls
 ×⊃(≥0|<4)
