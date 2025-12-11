@@ -22,12 +22,18 @@
 ⋕
 # Add start position
 ⊂50
-
-# Accumulate rotation(without modulo) & check the sign of end point
+# Accumulate rotation(without modulo)
 \+
-# Check if crossing
-↥↥⊸⊃(=0|≥100⌵|⊂0↻¯1=¯1⧈(/×)2±)
-# Count the number of complete turns at each moves
-⊙(⌊÷100⌵)
-# count the total number of 0 crossings
-/+⬚0↥
+# Tick the sequence all the way and count the number of 0
+⊸(
+  ⧈∘2       # Set the range limits
+  ⍚(♭⍜-⇡°⊟) # Develop the ranges
+  /◇⊂       # Concatenate the ranges
+  =0◿100    # Loops the ranges and get the 0
+  /+        # Counts the 0
+)
+# Count the number of time it get over 100
+⊙(/+↥0-₁⌊÷100⌵)
+
+# Add everything
++
