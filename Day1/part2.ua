@@ -1,4 +1,4 @@
-# Open input
+# # Open input
 &rs ∞ &fo "aoc2025_1_1.txt"
 # $ L68
 # $ L30
@@ -10,30 +10,30 @@
 # $ L99
 # $ R14
 # $ L82
-# Split by line
-⊜□⊸≠@\n
-# Replace R by '0'
-⊸=@R
-(⊙⋅)⍚⍜▽(@0)
-# Replace L by '-'
-⊸=@L
-(⊙⋅)⍚⍜▽(@-)
-# Parse the list
-⋕
-# Add start position
-⊂50
-# Accumulate rotation(without modulo)
-\+
-# Tick the sequence all the way and count the number of 0
-⊸(
-  ⧈∘2       # Set the range limits
-  ⍚(♭⍜-⇡°⊟) # Develop the ranges
-  /◇⊂       # Concatenate the ranges
-  =0◿100    # Loops the ranges and get the 0
-  /+        # Counts the 0
+Data ←
+Deltas ← (
+  # Split by line
+  ⊜□⊸≠@\n Data
+  # Replace R by '0'
+  ⊸=@R
+  (⊙⋅)⍚⍜▽(@0)
+  # Replace L by '-'
+  ⊸=@L
+  (⊙⋅)⍚⍜▽(@-)
+  # Parse the list
+  ⋕
 )
-# Count the number of time it get over 100
-⊙(/+↥0-₁⌊÷100⌵)
+Mag  ← ⌵ Deltas
+Pos  ← ⊂50 +50\+ Deltas
+Spos ← ⍜⇌↘₁Pos
+Epos ← ↘₁Pos
+CR   ← - ⌊(÷100Spos) ⌊(÷100Epos)
+CL   ← - ⌊(÷100-₁Epos) ⌊(÷100-₁Spos)
 
-# Add everything
-+
+↥ CL CR
+/+
+
+
+# FINALLY!!!
+# Why did that took so long? It's not even a difficult problem.
+# Anyways, it works. Coffee time.
