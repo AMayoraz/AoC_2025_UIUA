@@ -3,7 +3,7 @@
 # $ 10-14
 # $ 16-20
 # $ 12-18
-# $
+# $ 
 # $ 1
 # $ 5
 # $ 8
@@ -23,17 +23,15 @@ Parsed ← (
   ≡°□⍚⊜⋕◇⊸≠@-
 )
 
-# Check equivalence
-↧⊸˙⊞⊃(≥⊢|≤⊣)Parsed
-# Remove diagonal
-×¬/↥˜-⊸⊙˙⊞=
-# Keep the valid ranges
-▽⊸≠0♭
-# Sort the elements
-⍆
-# Reshape in two columns
-↯∞_2
-# Get the number of elements in ranges
-+₁/-⍉
-# Sum all elements
-/+
+# Sort the ranges
+⍆Parsed
+# Scan for the higher upper ranges and check if greater than next lower randge
+⊸(≥⊙(⬚0↻₋₁+₁\↥)°⊟⍉)
+# Create the groups IDs
+-₁\+¬
+# Group given the group IDs
+⊕(□♭)
+# Get the higher and lower bound of every group and count the numger of elements
+⍚(+₁/-⊂⊃/↧/↥)
+# Sum Everything
+/◇+
