@@ -27,7 +27,7 @@ Dist   ← √/+°√-
 # Get min distance
 =⊸≡/↧↥⊸(×∞=0)
 # Get connection coordinates
-⊟°ℂ♭≡(▽⊸≠0)×˙⊞ℂ⊸(⇡⧻)
+˜▽⊙♭↯∞_2˙⊞⊟⊸(⇡⧻)
 # Sort connections and remove duplicates
 ⍆◴≡⍆⍉
 # Group the connectionw by endpoint
